@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "Car"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "available": {
+      "type": "boolean",
+      "required": true
+    },
+    "passengers": {
+      "type": "integer",
+      "required": false,
+      "default": 1
+    },
+    "gear_shift": {
+      "type": "enumeration",
+      "default": "Automatic",
+      "enum": [
+        "Automatic",
+        "Manual"
+      ]
+    },
+    "air_conditioning": {
+      "type": "boolean",
+      "default": true
+    },
+    "bags": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::type.type",
+      "inversedBy": "cars"
+    },
+    "bluetooth": {
+      "type": "boolean",
+      "default": true
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "year": {
+      "type": "biginteger"
+    }
+  }
+}
