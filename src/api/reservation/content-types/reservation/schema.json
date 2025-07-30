@@ -46,10 +46,6 @@
       "required": false,
       "default": "10:00:00.000"
     },
-    "location": {
-      "type": "string",
-      "required": true
-    },
     "car": {
       "type": "relation",
       "relation": "oneToOne",
@@ -64,6 +60,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type.type"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
     }
   }
 }

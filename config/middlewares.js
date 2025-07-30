@@ -18,15 +18,15 @@ module.exports = [
 						"'self'",
 						"data:",
 						"blob:",
-						"res.cloudinary.com", // ¡Añade esto!
+						"res.cloudinary.com", 
 					],
 					"media-src": [
 						"'self'",
 						"data:",
 						"blob:",
-						"res.cloudinary.com", // ¡Añade esto!
+						"res.cloudinary.com", 
 					],
-					upgradeInsecureRequests: null, // Si usas HTTPS, esto ayuda a que las peticiones se hagan por HTTPS
+					upgradeInsecureRequests: null,
 				},
 			},
 		},
